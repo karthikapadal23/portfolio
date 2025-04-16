@@ -1,9 +1,9 @@
-name: Deploy static portfolio to GitHub Pages
+name: Deploy static site to GitHub Pages
 
 on:
   push:
     branches:
-      - main  # or 'master' if your branch is called master
+      - main
 
 permissions:
   contents: read
@@ -20,10 +20,10 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v3
 
-      - name: Upload artifact
+      - name: Upload site files
         uses: actions/upload-pages-artifact@v2
         with:
-          path: .  # use . if your index.html is in the root
+          path: .
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2
