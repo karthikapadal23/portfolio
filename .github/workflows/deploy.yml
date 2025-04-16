@@ -22,7 +22,7 @@ jobs:
       - name: Upload site files
         uses: actions/upload-pages-artifact@v2
         with:
-          path: .  # or 'dist', 'build', etc.
+          path: '.'  # Adjust if your build output is in 'dist' or 'build'
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2
